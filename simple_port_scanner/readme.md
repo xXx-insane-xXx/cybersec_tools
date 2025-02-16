@@ -1,10 +1,10 @@
-# Simple port scanner
+# Simple Port Scanner
 
-This is a very basic tcp port scanner without any multithreading or extensive error checking. <br>
-It is intended that the user will provide a correct ip address or hostname as an argument as no extensive error handling is done. <br>
+This is a very basic **TCP port scanner** without any multithreading or extensive error checking.  
+It is intended that the user will provide a **correct IP address or hostname** as an argument, as no extensive error handling is done.
 
 ## Usage
-``
-chmod +x simple_port_scanner.py <br>
-./scanner.py <ip/ hostname>
-``
+
+```sh
+chmod +x simple_port_scanner.py
+./simple_port_scanner.py <ip_or_hostname>
