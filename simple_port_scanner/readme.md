@@ -5,6 +5,6 @@ It is intended that the user will provide a correct ip address or hostname as an
 
 ## Usage
 ``
-chmod +x simple_port_scanner.py
+chmod +x simple_port_scanner.py <br>
 ./scanner.py <ip/ hostname>
 ``
