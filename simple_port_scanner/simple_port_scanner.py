@@ -9,10 +9,15 @@ from datetime import datetime
 
 #Define our target
 if len(sys.argv) == 2:
-    target = socket.gethostbyname(sys.argv[1]) #translate hostname to ipv4 if not given an ipv4
+    try:
+        target = socket.gethostbyname(sys.argv[1]) #translate hostname to ipv4 if not given an ipv4
+    except socket.gaierror:
+        print("Hostname could not be resolved.")
+        sys.exit()
 else:
     print("Invalid amount of arguments.")
     print("Usage: python3 scanner.py <ip>")
+    sys.exit()
 
 #Add a banner
 print("-" * 50)
@@ -34,10 +39,6 @@ try:
 
 except KeyboardInterrupt:
     print("\nExiting program.")
-    sys.exit()
-
-except socket.gaierror:
-    print("Hostname could not be resolved.")
     sys.exit()
 
 except socket.error:
